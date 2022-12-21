@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-image: -webkit-linear-gradient(45deg, rgb(72, 205, 238), rgb(241, 79, 187), rgb(72, 205, 238));
+    height: 60px;
+    width: 100%;
+}
+
+header .logo{
+    text-shadow: 2px 2px rgb(241, 85, 202);
+    color: white;
+    font-size: 25px;
+    line-height: 60px;
+    font-weight: bold;
+    padding: 0 100px;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+header ul{
+    float: right;
+    margin-right: 20px;
+}
+header ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+}
+
+header ul li a{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 7px 13px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+header a.active,header a:hover{
+    background-image: -webkit-linear-gradient(45deg, royalblue, rgb(241, 79, 187), royalblue);
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width:972px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 14px;
+    }
+    
+
+}
+
+@media screen and (max-width: 852px) {
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: grey;
+        top: 60px;
+        left: -100%;
+        text-align: center;    
+        transition: all .5s;
+    }
+    header ul li{
+        display: block;
+        margin:50px 0;
+        line-height: 30px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #f18f1f;
+    }
+
+    header ul li a{
+        font-size: 18px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+    
+       
+}
+@media screen and (max-width:430px) {
+    label.logo{
+        font-size: 20px;
+        padding-left: 30px;
+    }
+}
